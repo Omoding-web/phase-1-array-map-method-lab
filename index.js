@@ -1,3 +1,20 @@
+//To capitalize the first letter of a string 
+function capitalizeFirstLetter(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+//To convert a sentence to title case
+function titleCase(sentence) {
+  const words = sentence.split(' ');
+  const titleCasedWords = words.map(word => capitalizeFirstLetter(word));
+  return titleCasedWords.join(' ');
+}
+
+//Converting tutorials to title case
+function titleCased() {
+  return tutorials.map(titleCase);
+}
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -11,6 +28,8 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+//Function to return tutorials in title case
+const getTitleCasedTutorials = () => {
+  return titleCased();
 }
+
